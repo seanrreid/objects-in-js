@@ -73,3 +73,21 @@ function prettyPrintItemInAddressBook(book, item) {
         console.log(entry[item]);
     });
 }
+
+function callAnotherFunction(jeff) {
+    let msg = jeff();
+    console.log(`Your message said: ${msg}`);
+}
+
+function returnWoof() {
+    return "woof";
+}
+
+function returnMeow() {
+    return "meow";
+}
+
+callAnotherFunction(returnWoof);
+callAnotherFunction(function () {
+    return "chirp";
+});
