@@ -42,3 +42,34 @@ const addressBook = {
         city: 'Atlanta',
     },
 };
+
+
+
+function prettyPrintAddressBook(book) {
+    // grab all the keys
+    const allTheKeys = Object.keys(book);
+
+    // using each key, look up the entry
+    allTheKeys.forEach(function (stringKey) {
+        // look up stringKey in book
+        let entry = book[stringKey];
+        // print the entry
+        console.log(stringKey);
+        console.log(entry);
+    });
+}
+
+function prettyPrintItemInAddressBook(book, item) {
+    // grab all the keys
+    const allTheKeys = Object.keys(book);
+
+    // using each key, look up the entry
+    allTheKeys.forEach(function (stringKey) {
+        // look up stringKey in book
+        let entry = book[stringKey];
+        // print the entry
+        // console.log(item);
+        // debugger;
+        console.log(entry[item]);
+    });
+}
