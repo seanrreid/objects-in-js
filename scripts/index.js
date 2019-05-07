@@ -36,7 +36,7 @@ const addressBook = {
         address: '3423 Piedmont', 
         city: 'Atlanta',
     },
-    "Chris Aquino": {
+    "Sean Reid": {
         phone: '404-999-1234', 
         address: '3421 Piedmont', 
         city: 'Atlanta',
@@ -74,6 +74,7 @@ function prettyPrintItemInAddressBook(book, item) {
     });
 }
 
+// This is a Higher Order Function!
 function callAnotherFunction(jeff) {
     let msg = jeff();
     console.log(`Your message said: ${msg}`);
