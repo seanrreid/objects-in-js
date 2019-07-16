@@ -1,4 +1,5 @@
 function transl33t(originalString) {
+
     const leetDictionary = {
         // Keys are strings, just like in python
         // But in JS, quotes are optional
@@ -15,20 +16,22 @@ function transl33t(originalString) {
     // loop through each letter in originalString
     // if it's in the dictionary, and if it is
     // put its value in `result`
-    for (let i = 0; i < originalString.length; i++){
+    
+    for (let i=0,len=originalString.length; i<len; i++) {
         let theLetter = originalString[i].toUpperCase();
-        // console.log(theLetter);
-        // console.log(leetDictionary[theLetter]);
-        if (leetDictionary[theLetter] !== undefined) {
-            result += leetDictionary[theLetter];
-        } else {
-            // if it's not, just copy the letter into `result`
-            result += theLetter;
-        }
+        result += (leetDictionary[theLetter] !== undefined)
+                    ? leetDictionary[theLetter]
+                    : theLetter;    
     }
-
     return result;
 }
+
+console.log(transl33t('Hello this is my string'));
+
+
+
+
+
 
 const addressBook = {
     DigitalCrafts: {
